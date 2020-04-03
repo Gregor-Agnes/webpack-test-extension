@@ -10,6 +10,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         hot: true,
+        disableHostCheck: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
