@@ -5,7 +5,7 @@
 // Include the foundation-everything mixin, with the flex grid:
 @include foundation-everything();
 body {
-    background: lighten(red, 20);
+    background: lighten(red, 20) url(logo.png);
     p {
         color: blue;
     }

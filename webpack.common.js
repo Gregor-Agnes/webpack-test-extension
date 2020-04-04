@@ -12,6 +12,22 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
+        publicPath: 'http://localhost:8080/',
     },
+    module: {
+        rules: [
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext][query]',
+                        },
+                    }
+                ]
+            }
+        ]
+    }
 };
