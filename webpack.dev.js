@@ -5,9 +5,13 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './public',
+        contentBase: 'public',
         hot: true,
         disableHostCheck: true,
+        liveReload: false,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     },
     module: {
         rules: [

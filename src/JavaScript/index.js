@@ -2,8 +2,14 @@ import _ from 'lodash';
 import printMe from './print.js';
 import Foundation from 'foundation-sites';
 import $ from 'jquery'
-import './Scss/style.scss';
+import '../Scss/style.scss';
 
+import { dom, library } from '@fortawesome/fontawesome-svg-core'
+import { faCheck, faCircle} from '@fortawesome/pro-solid-svg-icons' // ES Module "as" syntax
+
+library.add(faCheck, faCircle)
+
+dom.watch()
 
 if (process.env.NODE_ENV !== 'production') {
       console.log('Looks like we are in development mode!');
@@ -14,7 +20,7 @@ function component() {
     const btn = document.createElement('button');
     const paragraph = document.createElement('p');
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hallo', 'webpack'], ' ');
 
     paragraph.innerText = ('hi du')
     element.appendChild(paragraph)
