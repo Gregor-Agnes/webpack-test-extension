@@ -2,7 +2,7 @@ import _ from 'lodash';
 import printMe from './print.js';
 import Foundation from 'foundation-sites';
 import $ from 'jquery'
-import './style.scss';
+import './Scss/style.scss';
 
 
 if (process.env.NODE_ENV !== 'production') {
