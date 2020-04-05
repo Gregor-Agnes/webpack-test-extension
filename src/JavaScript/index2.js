@@ -1,22 +1,20 @@
 import _ from 'lodash';
 import printMe from './print.js';
 import Foundation from 'foundation-sites';
-import $ from 'jquery'
 import '../Scss/style2.scss';
 
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faCheck, faCircle} from '@fortawesome/pro-solid-svg-icons' // ES Module "as" syntax
 
+// HMR / Hot
 if (module.hot)
     module.hot.accept()
 
+// FontAwesome
 library.add(faCheck, faCircle)
-
 dom.watch()
 
-if (process.env.NODE_ENV !== 'production') {
-      console.log('Lossoks like we are in development mode!');
-     }
+$('body').css('background', 'red')
 
 function component() {
     const element = document.createElement('div');
@@ -38,9 +36,9 @@ function component() {
 document.body.appendChild(component());
 
 if (module.hot) {
-    module.hot.accept('./print.js', function () {
+    module.hot.accept('./print.js', function ($) {
         console.log('Accepting the updated printMe module!');
-        printMe();
+        printMe($);
     })
 }
 

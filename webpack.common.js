@@ -33,6 +33,17 @@ module.exports = {
                     'file-loader',
                 ],
             },
+            {
+                // Exposes jQuery for use outside Webpack build
+                test: require.resolve('jquery'),
+                use: [{
+                    loader: 'expose-loader',
+                    options: 'jQuery'
+                }, {
+                    loader: 'expose-loader',
+                    options: '$'
+                }]
+            },
         ]
     },
     plugins: [
