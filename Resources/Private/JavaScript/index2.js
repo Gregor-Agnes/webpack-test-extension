@@ -14,8 +14,6 @@ if (module.hot)
 library.add(faCheck, faCircle)
 dom.watch()
 
-$('body').css('background', 'red')
-
 function component() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
@@ -33,15 +31,20 @@ function component() {
     return element;
 }
 
-document.body.appendChild(component());
 
 if (module.hot) {
     module.hot.accept('./print.js', function ($) {
-        console.log('Accepting the updated printMe module!');
+        console.log('Accepting tdhe updated printMe module!');
         printMe($);
     })
 }
 
 $(document).foundation()
 
-$('body').append('hott')
+
+$(document).ready(function() {
+    $('.columns').first().append(component());
+
+    $('.columns').first().append('<p>hot</p>')
+
+})

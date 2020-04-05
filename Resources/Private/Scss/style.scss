@@ -5,7 +5,7 @@
 // Include the foundation-everything mixin, with the flex grid:
 @include foundation-everything();
 body {
-    background: lighten(red, 20) url(../Gfx/logo.png);
+    background: lighten(yellow, 20) url(../Gfx/logo.png);
     p {
         color: teal;
         background: url(../Gfx/kk-logo.png)

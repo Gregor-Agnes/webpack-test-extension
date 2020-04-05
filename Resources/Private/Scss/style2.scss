@@ -6,8 +6,10 @@
 // Include the foundation-everything mixin, with the flex grid:
 @include foundation-everything();
 body {
-    background: lighten(green, 20)
-;
+    background: linear-gradient(180deg, lighten(#658003, 20) 0,yellow 100%);
+   .grid-container {
+       background: white;
+   }
     p {
         color: teal;
         background: url(../Gfx/kk-logo.png)
