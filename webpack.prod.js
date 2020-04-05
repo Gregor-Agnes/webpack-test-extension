@@ -5,7 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
-    devtool: 'source-map',
+    //devtool: 'source-map',
     module: {
         rules: [
             {
@@ -24,7 +24,7 @@ module.exports = merge(common, {
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: '[name].css',
-            chunkFilename: '[id].css',
+            chunkFilename: '[name].css',
         }),
     ],
 });

@@ -5,11 +5,11 @@ module.exports = {
     mode: 'development',
     entry: {
         app: './src/Javascript/index.js',
+        app2: './src/Javascript/index2.js',
     },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public'),
-        publicPath: 'http://localhost:8080/',
     },
     module: {
         rules: [
@@ -40,9 +40,9 @@ module.exports = {
                 // Lossless optimization with custom option
                 // Feel free to experiment with options for better result for you
                 plugins: [
-                    ["gifsicle", { interlaced: true }],
-                    ["jpegtran", { progressive: true }],
-                    ["optipng", { optimizationLevel: 5 }],
+                    ["gifsicle", {interlaced: true}],
+                    ["jpegtran", {progressive: true}],
+                    ["optipng", {optimizationLevel: 5}],
                     [
                         "svgo",
                         {
@@ -57,4 +57,16 @@ module.exports = {
             }
         })
     ],
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
+    },
 };
