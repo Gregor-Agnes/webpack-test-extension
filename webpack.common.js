@@ -17,6 +17,9 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     {
+                        loader: 'cache-loader'
+                    },
+                    {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext][query]',

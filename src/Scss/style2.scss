@@ -1,0 +1,17 @@
+ @import 'settings';
+@import '../../node_modules/foundation-sites/scss/foundation';
+//@import 'foundation-sites/foundation';
+
+// Include the foundation-everything mixin, with the flex grid:
+@include foundation-everything();
+body {
+    background: lighten(red, 20)
+;
+    p {
+        color: teal;
+        background: url(../Gfx/kk-logo.png)
+    }
+    div {
+        background: url(../Gfx/aktentasche.svg)
+    }
+}

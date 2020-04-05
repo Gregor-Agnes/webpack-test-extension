@@ -7,6 +7,9 @@ import '../Scss/style.scss';
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faCheck, faCircle} from '@fortawesome/pro-solid-svg-icons' // ES Module "as" syntax
 
+if (module.hot)
+    module.hot.accept()
+
 library.add(faCheck, faCircle)
 
 dom.watch()
