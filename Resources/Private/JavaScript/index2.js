@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import _ from 'lodash';
 import printMe from './print.js';
 import Foundation from 'foundation-sites';
