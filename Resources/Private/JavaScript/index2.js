@@ -1,4 +1,3 @@
-import "@babel/polyfill";
 import _ from 'lodash';
 import printMe from './print.js';
 import Foundation from 'foundation-sites';
@@ -6,7 +5,9 @@ import '../Scss/style2.scss';
 
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faCheck, faCircle} from '@fortawesome/pro-solid-svg-icons' // ES Module "as" syntax
+import { polyfill } from 'es6-promise';
 
+polyfill();
 import  axios from 'axios';
 
 // HMR / Hot
