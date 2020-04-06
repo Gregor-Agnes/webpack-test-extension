@@ -4,12 +4,12 @@ const ImageminPlugin = require("imagemin-webpack");
 module.exports = {
     mode: 'development',
     entry: {
-        app: './Resources/Private/Javascript/index.js',
-        app2: './Resources/Private/Javascript/index2.js',
+        app: './Resources/Private/JavaScript/index.js',
+        app2: './Resources/Private/JavaScript/index2.js',
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, '/Resources/Public'),
+        path: path.resolve(__dirname + '/Resources/Public'),
     },
     module: {
         rules: [

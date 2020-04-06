@@ -6,6 +6,8 @@ import '../Scss/style2.scss';
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faCheck, faCircle} from '@fortawesome/pro-solid-svg-icons' // ES Module "as" syntax
 
+import  axios from 'axios';
+
 // HMR / Hot
 if (module.hot)
     module.hot.accept()
@@ -29,6 +31,7 @@ function component() {
 
     element.appendChild(btn);
     return element;
+
 }
 
 
@@ -38,6 +41,20 @@ if (module.hot) {
         printMe($);
     })
 }
+
+axios.get('http://webpack.richcontent.de/test.html')
+
+    .then(function (response) {
+        // handle success
+        console.log(response);
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .then(function () {
+        // always executed
+    });
 
 $(document).foundation()
 
