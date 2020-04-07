@@ -44,7 +44,7 @@ if (module.hot) {
     })
 }
 
-axios.get('http://webpack.richcontent.de/test.html')
+axios.get('http://webpack.richcontent.de/test.php')
 
     .then(function (response) {
         // handle success
