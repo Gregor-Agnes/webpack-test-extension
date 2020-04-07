@@ -8,7 +8,7 @@ module.exports = merge(common, {
         publicPath: 'http://localhost:8080/',
     },
     devServer: {
-        contentBase: 'public',
+        contentBase: 'Resources/Public',
         hot: true,
         disableHostCheck: true,
         liveReload: false,

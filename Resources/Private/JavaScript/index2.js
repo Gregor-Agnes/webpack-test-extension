@@ -58,9 +58,6 @@ axios.get('http://webpack.richcontent.de/test.html')
         // always executed
     });
 
-$(document).foundation()
-
-
 $(document).ready(function() {
     $('.columns').first().append(component());
 
