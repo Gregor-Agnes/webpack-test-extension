@@ -14,28 +14,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'Gfx/[name].[ext][query]',
-            },
-          }
-        ]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'Fonts/[name].[ext][query]',
-            },
-          }
-        ],
-      },
-      {
         // Exposes jQuery for use outside Webpack build
         test: require.resolve('jquery'),
         use: [{
