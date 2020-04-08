@@ -28,7 +28,7 @@ function component() {
     paragraph.innerText = ('hi du')
     element.appendChild(paragraph)
 
-    btn.innerHTML = 'cfflick me and check the console!';
+    btn.innerHTML = 'Hlick me and check the console!';
     btn.onclick = printMe;
 
     element.appendChild(btn);
@@ -62,5 +62,6 @@ $(document).ready(function() {
     $('.columns').first().append(component());
 
     $('.columns').first().append('<p>hot</p>')
+  console.log('horst')
 
 })
