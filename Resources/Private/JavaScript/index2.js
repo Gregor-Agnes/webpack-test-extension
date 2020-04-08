@@ -9,7 +9,10 @@ import { polyfill } from 'es6-promise';
 
 polyfill();
 import  axios from 'axios';
+console.log(_.compact([0, 1, false, 2, '', 3]))
+const number = 123456.789;
 
+console.log(new Intl.NumberFormat('de-DE', { style: 'currency', useGrouping: false, currency: 'EUR' }).format(number));
 // HMR / Hot
 if (module.hot)
     module.hot.accept()
