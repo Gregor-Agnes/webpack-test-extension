@@ -10,7 +10,7 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
-                use: ['cache-loader',
+                use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
@@ -19,12 +19,13 @@ module.exports = merge(common, {
         ],
     },
     plugins: [
-        //new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: '[name].css',
-            chunkFilename: '[name].css',
+            filename: '[name]/app.css',
+            chunkFilename: '[name]/app.css',
         }),
+
     ],
 });
