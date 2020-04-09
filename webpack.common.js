@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageminPlugin = require("imagemin-webpack");
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -55,7 +57,16 @@ module.exports = {
           ]
         ]
       }
-    })
+    }),
+    new CopyPlugin([
+      {
+        from: 'Icons/**/*.*',
+        to: '../Public',
+        toType: 'dir',
+        context: './Resources/Private/',
+      },
+    ]),
+
   ],
   optimization: {
     splitChunks: {

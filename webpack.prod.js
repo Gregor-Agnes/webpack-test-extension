@@ -59,6 +59,5 @@ module.exports = merge(common, {
       filename: '[name]/app.css',
       chunkFilename: '[name]/app.css',
     }),
-
   ],
 });
