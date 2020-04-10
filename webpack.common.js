@@ -69,11 +69,12 @@ module.exports = {
 
   ],
   optimization: {
+    minimize: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'Vendors',
+          name: 'JavaScriptLibs',
           chunks: 'all',
         },
       },

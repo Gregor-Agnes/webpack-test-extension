@@ -14,7 +14,8 @@ module.exports = merge(common, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: 'Css/'
+              publicPath: 'Css/',
+              name: '[name]/app.[ext][query]',
             },
           },
           {
@@ -57,7 +58,8 @@ module.exports = merge(common, {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name]/app.css',
-      chunkFilename: '[name]/app.css',
+      chunkFilename: '[id]/app.css',
     }),
+
   ],
 });

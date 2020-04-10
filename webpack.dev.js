@@ -20,9 +20,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [{
-          loader: 'cache-loader'
-        },
+        use: [
           {
             loader: "style-loader"
           }, {
