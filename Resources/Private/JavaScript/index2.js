@@ -65,6 +65,6 @@ $(document).ready(function() {
     $('.columns').first().append(component());
 
     $('.columns').first().append('<p>hot</p>')
-  console.log('horst')
+  console.log('tester')
 
 })

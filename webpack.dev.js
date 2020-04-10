@@ -22,6 +22,9 @@ module.exports = merge(common, {
         test: /\.s[ac]ss$/i,
         use: [
           {
+            loader: 'cache-loader',
+          },
+          {
             loader: "style-loader"
           }, {
             loader: "css-loader",
@@ -39,6 +42,9 @@ module.exports = merge(common, {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
+            loader: 'cache-loader',
+          },
+          {
             loader: 'file-loader',
             options: {
               name: 'Gfx/[name].[ext][query]',
@@ -50,6 +56,9 @@ module.exports = merge(common, {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
+          {
+            loader: 'cache-loader',
+          },
           {
             loader: 'file-loader',
             options: {
