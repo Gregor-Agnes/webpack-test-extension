@@ -22,12 +22,12 @@ function component() {
     const btn = document.createElement('button');
     const paragraph = document.createElement('p');
 
-    element.innerHTML = _.join(['Hallo', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hallso', 'webpack'], ' ');
 
     paragraph.innerText = ('hi du')
     element.appendChild(paragraph)
 
-    btn.innerHTML = 'Click me and check the console!';
+    btn.innerHTML = 'Click me and check the conssole!';
     btn.onclick = printMe;
 
     element.appendChild(btn);

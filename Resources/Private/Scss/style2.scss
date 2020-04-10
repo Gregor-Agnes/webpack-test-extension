@@ -1,12 +1,12 @@
  @import 'settings';
-@import 'foundation-sites/scss/foundation';
+@import 'node_modules/foundation-sites/scss/foundation';
  @import "advent-fonts";
 //@import 'foundation-sites/foundation';
 
 // Include the foundation-everything mixin, with the flex grid:
 @include foundation-everything();
 body {
-    background: linear-gradient(180deg, lighten(#658003, 20) 0,teal 100%);
+   // background: linear-gradient(180deg, lighten(#658003, 20) 0,teal 100%);
    .grid-container {
        background: white;
    }
