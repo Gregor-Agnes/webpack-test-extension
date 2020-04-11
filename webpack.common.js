@@ -19,6 +19,8 @@ module.exports = {
         // Exposes jQuery for use outside Webpack build
         test: require.resolve('jquery'),
         use: [{
+          loader: 'cache-loader',
+        },{
           loader: 'expose-loader',
           options: 'jQuery'
         }, {
